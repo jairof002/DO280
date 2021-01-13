@@ -1,0 +1,612 @@
+    1  exit
+    2  ssh lab@utility
+    3  sudo shutdown -h now
+    4  ls
+    5  ssh lab@utility
+    6  ls
+    7  sudo su -
+    8  exit
+    9  sudo dnf install gnome-tweaks
+   10  source /usr/local/etc/ocp4.config
+   11  lab execute-troubleshoot start
+   12  ls
+   13  source usr/local/etc/ocp4.config
+   14  echo -p ${RHT_OCP4_KUBEADM_PASSWD}
+   15  echo ${RHT_OCP4_KUBEADM_PASSWD}
+   16  echo $RHT_OCP4_KUBEADM_PASSWD
+   17  ping workstation.lab.example.com
+   18  ifconfig
+   19  oc login
+   20  find / -name kubeadmin-password -print
+   21  find / -name kubeadmin-password -print | grep kubeadmin
+   22  oc login -u kubeadmin -pMMTUc-TnXjo-NFyh3-aeWmC https://api.ocp4.example.com:6443
+   23  ssh lab@utility
+   24  oc login -u kubeadmin -p MMTUc-TnXjo-NFyh3-aeWmC https://api.ocp4.example.com:6443
+   25  oc login -u kubeadmin -p redhat https://api.ocp4.example.com:6443
+   26  ls /usr/local/etc
+   27  ocp4.config
+   28  source /usr/local/etc/ocp4.config
+   29  echo $KUBEADM_PASSWD
+   30  echo $RHT_OCP4_KUBEADM_PASSWD
+   31  history | grep "oc login"
+   32  oc login -u kubeadmin -p MMTUc-TnXjo-NFyh3-aeWmC https://api.ocp4.example.com:6443
+   33  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+   34  oc get pods
+   35  oc projects
+   36  ls
+   37  cd ..
+   38  ls
+   39  ls DO280
+   40  ls labs
+   41  ls
+   42  cd DO280
+   43  ls
+   44  ls labs
+   45  ls labs execute-troubleshoot
+   46  ls
+   47  ls labs/execute-troubleshoot
+   48  source /usr/local/etc/ocp4.config
+   49  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+   50  oc whoami
+   51  oc get nodes
+   52  oc adm top nodes
+   53  oc describe node master01
+   54  oc get nodes
+   55  oc adm --help
+   56  oc --help
+   57  oc get nodes
+   58  oc adm top nodes
+   59  oc describe node master03
+   60  oc get clusterversion
+   61  oc describe clusterversion
+   62  oc get nodes
+   63  oc adm top nodes
+   64  oc describe node master01
+   65  oc get clusterversion
+   66  oc describe clusterversion
+   67  cd ..
+   68  ls
+   69  pwd
+   70  cd /
+   71  ls
+   72  cd tmp
+   73  ls
+   74  cd /home/student
+   75  ls
+   76  find / -name inst -print
+   77  oc get clusteroperators
+   78  oc get nodes
+   79  oc adm node-logs master01
+   80  oc adm node-logs master01 | less
+   81  oc adm node-logs master01 | tail
+   82  oc adm node-logs -u crio | tail
+   83  oc adm node-logs -u crio master03 | tail
+   84  oc get logs -u kubelet master01 |tail
+   85  oc adm get logs -u kubelet master01 |tail
+   86  oc adm node-logs -u kubelets master03 | tail
+   87  oc adm node-logs -u kubelet master03 | tail
+   88  history 10
+   89  history 20
+   90  oc get nodes
+   91  oc adm get-logs master01
+   92  oc adm node-log master01 | tail
+   93  oc adm node-logs master01 | tail
+   94  oc get clusterversion
+   95  oc describe clusterversion
+   96  oc get pods
+   97  oc get clusterversion
+   98  oc get nodes
+   99  oc adm node-logs master01 
+  100  oc adm node-logs --help
+  101  oc get nodes
+  102  oc debug nodes/master01
+  103  history 10
+  104  oc get events
+  105  oc loglevel=6 get pods
+  106  oc --loglevel=6 get pods
+  107  oc --loglevel=8 get pods
+  108  oc get nodes
+  109  ls
+  110  ls DO280
+  111  ls
+  112  ls DO280/labs
+  113  ls
+  114  cd DO280 
+  115  git init -b main
+  116  git init
+  117  git add .
+  118  git commit -m "First commit"
+  119  git remote add origin https://github.com/jairof002/DO288.git
+  120  git branch -M main
+  121  git push -u origin main
+  122  git add . 
+  123  git commit -a -m "commit"
+  124  ls
+  125  git remote add origin git@github.com:jairof002/DO280
+  126  git push -u origin master
+  127  git status
+  128  git checkout master
+  129  git checkout -b master
+  130  git add .
+  131  git commit -a -m "push to master"
+  132  git push --f
+  133  git push --force
+  134  git push --set-upstream origin master
+  135  ls
+  136  git init
+  137  git remote add origin https://github.com/jairof002/DO280
+  138  git push -u origin master
+  139  git remote add origin https://github.com/jairof002/DO280
+  140  git remote -v
+  141  git remote set-url origin git@github.com:jairof002/DO280.git
+  142  git remote -v
+  143  git add .
+  144  git commit -a -m "first"
+  145  git push -u origin master
+  146  git remote -v
+  147  git push -u origin master
+  148  1. List your existing remotes
+  149  To list the existing remotes we open the terminal and type in the following command:
+  150  $ git remote -v
+  151  If you copied the link to the repository from Clone with SSH in your GitLab, the output should look something like this:
+  152  origin git@your.git.repo.example.com:user/repository.git (fetch)
+  153  origin git@your.git.repo.example.com:user/repository.git (push)
+  154  If you copied the link to the repository from Clone with HTTPS in your GitLab, the output should look something like this:
+  155  origin https://your.git.repo.example.com/user/repository.git (fetch)
+  156  origin https://your.git.repo.example.com/user/repository.git (push)
+  157  Note: To find the SSH and HTTPS URLs, go to your GitLab, select your project, and click on Clone.
+  158  gitlab clone
+  159  2. Change a remote Git repository
+  160  :
+  161  $ git remote set-url origin git@your.git.repo.example.com:user/repository2.git
+  162  The command takes two arguments: existing name of the remote (in our case origin) and a new remote URL (in our case git@your.git.repo.example.com:u2.git)
+  163  cd ..
+  164  ls
+  165  cd D280
+  166  cd DO280
+  167  ls
+  168  git remote -v
+  169  git add --all
+  170  git commit -a -m "all"
+  171  git push
+  172  git push --set-upstream origin master
+  173  git remote -v
+  174  git remote set-url origin git@github.com:jairof002/DO280
+  175  git push --set upstream origin master
+  176  git push --set-upstream origin master
+  177  source /usr/local/etc/ocp4.config
+  178  oc login -u kubeadmin -p {RHT_OCP4_KUBEADM_PASWD} https://api.ocp4.example.com:6443
+  179  oc login -u kubeadmin -p {RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  180  history | grep "oc login"
+  181  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  182  oc get pods
+  183  oc get pods -n openshift
+  184  oc get pods
+  185  oc describe node master01
+  186  oc get pods -n openshift-image-registry
+  187  oc logs cluster-image-registry-operator-5f47f6fcf7-bh22s --tail=3
+  188  ls
+  189  cd ..
+  190  ls
+  191  cd DO288
+  192  cd DO280
+  193  ls
+  194  git remote -v
+  195  cd labs
+  196  ls
+  197  cd execute-troubleshoot/
+  198  ls
+  199  vim psql.yaml
+  200  ls -l
+  201  cd ..
+  202  ls
+  203  git add .
+  204  git commit -a -m "initial"
+  205  git push -u origin master
+  206  git-gui
+  207  source /usr/local/etc/ocp4.config
+  208  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  209  oc get nodes
+  210  oc odm top nodes
+  211  oc adm top nodes
+  212  oc get clusterversion
+  213  oc describe clusterversion
+  214  oc get clusteroperators
+  215  oc adm node-logs
+  216  oc get nodes
+  217  oc get pods
+  218  history | grep "oc login"
+  219  oc debug node/master01
+  220  oc get events
+  221  oc get events | grep image
+  222  oc get events | grep err
+  223  oc adm top node -l node-role-kubernetes.io/worker
+  224  oc adm top node -l node-role-kubernetes.io/master
+  225  oc get nodoes
+  226  oc get nodes
+  227  oc describe node master01
+  228  oc describe node master02
+  229  oc get pods -n opehshift-image-registry
+  230  oc get pods
+  231  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  232  oc get pods -n openshift-image-registry
+  233  oc logs cluster-image-registry-operator-5f47f6fcf7-bh22s
+  234  oc get pods
+  235  oc get pods -n openshift-image-registry
+  236  oc logs --tail=3 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  237  oc logs --tail=3 cluster-image-registry-operator-5f47f6fcf7-bh22s -c cluster-image-registry-operator
+  238  oc logs --tail=3 -n openshift-image-registry cluster-image-registry-operator-5f47f6fcf7-bh22s
+  239  oc logs --tail=3 -n openshift-image-registry cluster-image-registry-operator-5f47f6fcf7-bh22s -c cluster-image-registry-operator
+  240  oc logs --tail=3 -n openshift-image-registry image-registry-64b69c4bf9-48xl5
+  241  oc adm node-logs --tail=3 -u kubelet master01
+  242  oc adm node-logs --tail=10 -u kubelet master01
+  243  oc cluster-info
+  244  history 20
+  245  oc describe pod master01
+  246  history | grep "oc login"
+  247  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  248  oc get pods
+  249  oc get nodes
+  250  oc get pods -n openshift-image-registry
+  251  oc get nodes
+  252  oc describe node master01
+  253  ls
+  254  cd ..
+  255  ls
+  256  cd DO280
+  257  ls
+  258  source /usr/local/etc/ocp4.config
+  259  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com
+  260  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  261  oc debug nodes/master01
+  262  oc project execute-troubleshoot
+  263  oc get pods
+  264  oc status
+  265  oc get events
+  266  skopeo inspect docker://registry.access.redhat.com/rhscl/postgresq-96-rhel7
+  267  skopeo inspect docker://registry.access.redhat.com/rhscl/postgresql-96-rhel7
+  268  oc get deployments
+  269  oc get deployment psql -o yaml | grep image
+  270  oc edit deployment/psql -o yaml
+  271  oc get pods
+  272  oc status
+  273  oc get nodes
+  274  oc adm top node
+  275  oc describe node master01
+  276  oc get pod -n openshift-image-registry
+  277  oc logs --tail-6 -n opeshift-image-registry -c cluster-image-registry-operator-5f47f6fcf7-bh22s
+  278  oc logs --tail=6 -n opeshift-image-registry -c cluster-image-registry-operator-5f47f6fcf7-bh22s
+  279  oc logs --tail=6 -n opeshift-image-registry master01 -c cluster-image-registry-operator-5f47f6fcf7-bh22s
+  280  oc logs --tail=6 -n openshift-image-registry master01 -c cluster-image-registry-operator-5f47f6fcf7-bh22s
+  281  oc logs --tail=6 -n openshift-image-registry -c cluster-image-registry-operator-5f47f6fcf7-bh22s
+  282  oc logs --tail=6 -n openshift-image-registry cluster-image-registry-operator-5f47f6fcf7-bh22s
+  283  oc logs --tail=6 -n openshift-image-registry -c cluster-image-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  284  oc logs --tail=6 -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  285  oc get pods -n openshift-image-registry
+  286  oc logs --tail=6 -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s   2/2     Running     0          156d
+  287  oc logs --tail=6 -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  288  oc logs --tail=6 -n openshift-image-registry image-registry-64b69c4bf9-48xl5
+  289  oc get pods -n openshift-image-registry
+  290  oc logs --tail=6 -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  291  oc logs master01
+  292  oc adm --help
+  293  oc adm node logs --tail=6 master01
+  294  oc adm --tail=6 node-logs master01
+  295  oc adm node-logs --tail=6 master01
+  296  oc adm node-logs master01 --tail=6
+  297  oc adm node-logs --tail=6 master01
+  298  oc logs -n openshift-image-registry
+  299  oc get pods -n openshift-image-registry 
+  300  oc logs -tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  301  oc logs --tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  302  oc logs -n openshift-image-registry --tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  303  oc logs -n openshift-image-registry --tail=6 -c cluster-image-registry-operator-watch cluster-image-registry-operator-5f47f6fcf7-bh22s
+  304  oc get nodes
+  305  oc get pods -n openshift-image-registry
+  306  oc logs --tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  307  oc logs -n openshift-image-registry --tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  308  oc logs -n openshift-image-registry --tail=6 -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  309  oc logs --tail=6 image-registry-64b69c4bf9-48xl5
+  310  oc logs -n openshit-image-registry --tail=6 image-registry-64b69c4bf9-48xl5
+  311  oc logs -n openshift-image-registry --tail=6 image-registry-64b69c4bf9-48xl5
+  312  oc adm node-logs master01
+  313  oc adm node-logs master01 --tail=10
+  314  ls
+  315  cd labs
+  316  ls
+  317  ls execute-troubleshoot/
+  318  ls execute-troubleshoot/psq.yaml
+  319  cat execute-troubleshoot/psq.yaml
+  320  cat execute-troubleshoot/psql.yaml
+  321  cd ..
+  322  oc adm node-logs -u kubelet master01
+  323  oc adm node-logs -u kubelet master01 --tail=1
+  324  oc debug master01
+  325  oc --help
+  326  oc debug --help
+  327  oc get pods
+  328  oc get nodes
+  329  oc debug master01
+  330  oc debug --help
+  331  oc get nodes
+  332  oc debub node/master01
+  333  oc debug node/master01
+  334  ls
+  335  oc projects
+  336  oc get pod
+  337  oc status
+  338  oc get events
+  339  skopeo inspect registry.access.redhat.com/rhscl/postgresql-96-rhel7:1
+  340  skopeo inspect docker://registry.access.redhat.com/rhscl/postgresql-96-rhel7:1
+  341  oc get deployment
+  342  oc edit deployment psql -o json
+  343  lab execute-troubleshoot start
+  344  oc delete project execute-troubleshoot
+  345  lab execute-troubleshoot start
+  346  oc get nodes
+  347  oc adm top node
+  348  oc describe node master01
+  349  oc get pod -n openshift-image-registry 
+  350  oc projects
+  351  oc project
+  352  oc get pods -n openshift-image-registry
+  353  oc logs -n openshift-image-registry --tail=6 cluster-image-registry-operator-5f47f6fcf7-bh22s
+  354  oc logs -n openshfit-image-registry --tail=6 -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  355  oc logs -n openshift-image-registry --tail=6 -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  356  oc logs -n openshift-image-registry --tail=3 -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  357  oc get pods -n openshift-image-registry
+  358  oc logs -n openshift-image-registry --tail=3 image-registry-64b69c4bf9-48xl5
+  359  oc adm node-log -c kubelet master01
+  360  oc adm node-log
+  361  oc adm node-log --help
+  362  oc node-logs master01
+  363  oc adm node-logs master01
+  364  oc get nodes
+  365  oc adm node-logs -tail=3 master01
+  366  oc adm node-logs --tail=3 master01
+  367  oc adm node-logs --tail=3 -u kubelet master01
+  368  oc debug node/master01
+  369  oc project
+  370  oc get pods
+  371  oc logs psql-69676884f8-9bmdx
+  372  oc logs -n execute-troubleshoot psql-69676884f8-9bmdx
+  373  oc status
+  374  oc get deployment
+  375  oc get events
+  376  skopeo inspect docker://registry.access.redhat.com/rhscl/postgresq-96-rhel7:1
+  377  skopeo inspect docker://registry.access.redhat.com/rhscl/postgresql-96-rhel7:1
+  378  oc patch --help
+  379  oc edit deployment/psql
+  380  oc edit deployment/psql -o json
+  381  oc get pods
+  382  source /usr/local/etc/ocp4.config
+  383  login -u kubeadmin -p ${RHT_OCP4_KUBADM_PASSWD} https://api.ocp4.example.com:6443
+  384  oc login -u kubeadmin -p ${RHT_OCP4_KUBADM_PASSWD} https://api.ocp4.example.com:6443
+  385  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  386  oc get node
+  387  . /usr/local/etc/ocp4.config
+  388  history 10
+  389  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  390  oc get nodes
+  391  cd ../DO280
+  392  ls
+  393  source /usr/local/etc/ocp4.config
+  394  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  395  oc get nodes
+  396  ls
+  397  cd ..
+  398  ls
+  399  cd DO280
+  400  ls
+  401  . /usr/local/etc/ocp4.config
+  402  login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  403  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  404  oc get nodes
+  405  oc projects
+  406  cat /usr/local/etc/ocp4.config
+  407  oc projects
+  408  oc get nodes
+  409  oc adm top node
+  410  oc describe node master01
+  411  oc get pods -n openshift-image-registry
+  412  oc logs cluster-image-registry-operator-5f47f6fcf7-bh22s
+  413  oc logs -n openshift-image-registry cluster-image-registry-operator-5f47f6fcf7-bh22s
+  414  oc logs -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  415  oc logs --tail=10  -n openshift-image-registry -c cluster-image-registry-operator cluster-image-registry-operator-5f47f6fcf7-bh22s
+  416  oc get pods
+  417  oc get pods -n openshift-image-registry
+  418  oc logs -n openshift-image-registry --tail=10 image-registry-64b69c4bf9-48xl5
+  419  oc adm node-logs --tail=10 master01
+  420  oc adm node-logs --tail=10 -u kubelet master01
+  421  oc debug node/master01
+  422  ls
+  423  oc project
+  424  oc get pods
+  425  oc status
+  426  oc get events
+  427  oc get deployment 
+  428  oc status
+  429  git status
+  430  git remote -v
+  431  oc get storageclass
+  432  oc explain dc.spec
+  433  oc explain dc.spec.template.spec
+  434  oc explain dc.spec.template.spec.volumes
+  435  oc explain dc.spec.template.spec
+  436  [student@workstation DO280]$ 
+  437  oc explain dc.spec.template.spec.containers
+  438  cd ..
+  439  cd DO280
+  440  ls
+  441  ls labs
+  442  source /usr/local/etc/ocp4.config
+  443  ls labs/install-storage
+  444  cat labs/install-storage/init_data.sql
+  445  labs/install-storage/init_data.sql
+  446  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  447  labs/install-storage/init_data.sql
+  448  ls labs/install-storage
+  449  cat labs/install-storage/init_data.sh
+  450  oc get pods
+  451  cat labs/install-storage/check_data.sh
+  452  labs/install-storage/check_data.sh
+  453  cp labs/install-storage/check_data.sh /labs/install-storage/check_data2.sh
+  454  cp labs/install-storage/check_data.sh labs/install-storage/check_data2.sh
+  455  vim labs/install-storage/check_data.sh
+  456  labs/install-storage/check_data.sh
+  457  vim labs/install-storage/check_data.sh
+  458  vim labs/install-storage/check_data2.sh
+  459  cat labs/install-storage/check_data2.sh
+  460  oc get pods -l deployment=postgresql-persistent
+  461  oc get pods -l deploymentconfig=postgresql-persistent
+  462  vim labs/install-storage/check_data2.sh
+  463  labs/install-storage/check_data2.sh
+  464  vim labs/install-storage/check_data2.sh
+  465  labs/install-storage/check_data2.sh
+  466  git add .
+  467  git commit -a -m "install-storage"
+  468  git push
+  469  cd ..
+  470  ls
+  471  cd DO280
+  472  git status
+  473  git push -f -u origin master
+  474  git remote show origin
+  475  mkdir backup
+  476  cp -h
+  477  cp --help
+  478  cp -r DO288 backup
+  479  ls
+  480  rm backup
+  481  rmdir backup
+  482  cd ..
+  483  mkdir backup
+  484  cp -r DO280 backup
+  485  ls backup
+  486  tree backup
+  487  rmdir -r DO280
+  488  rmdir --help
+  489  rmdir -p DO288
+  490  rmdir -p DO280
+  491  rm -r DO280
+  492  y
+  493  ls
+  494  mkdir DO280
+  495  cd DO280
+  496  git init
+  497  git remote add origin https://github.com/jairof002
+  498  git remote add origin https://github.com/jairof002/DO280
+  499  git remote -v
+  500  cd ..
+  501  rm -f DO280
+  502  rm -r DO280
+  503  mkdir DO280
+  504  cd DO280
+  505  ls
+  506  git init
+  507  git remote add origin https://github.com/jairof002/DO280
+  508  git remote -v
+  509  cd ..
+  510  cp -r backup DO280
+  511  ls DO280
+  512  cd DO280
+  513  ls
+  514  rm -f backup
+  515  rm -r backup
+  516  y
+  517  cd ..
+  518  cp -r backup/ DO280
+  519  ls DO280
+  520  cd DO280
+  521  rm -r backup
+  522  cd ..
+  523  ls
+  524  cd backup
+  525  ls 
+  526  cd DO280
+  527  ls
+  528  cp -r labs ~/DO280
+  529  cd ..
+  530  cd DO280
+  531  ls
+  532  git add .
+  533  git commit -a -m "init"
+  534  git config --global --edit
+  535  git commit --amend --reset-author
+  536  git push -a -m "init"
+  537  git coomit -a -m "init"
+  538  git commit -a -m "init"
+  539  git push -u origin master
+  540  lab install-storage start
+  541  ls
+  542  ls labs
+  543  source /usr/local/etc/ocp4.config
+  544  oc login -u jairof-us -p ${RH
+  545  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  546  oc new-project install-storage
+  547  oc get storageclass
+  548  skopeo inspect docker://registry.redhat.io/rhel8/postgresql-12;1-43
+  549  podman login registry.redhat.io
+  550  echo $RHT_OCP4_KUBEADM_PASSWD
+  551  podman login registry.redhat.io
+  552  skopeo inspect docker://registry.redhat.io/rhel8/postgesql-12:1-43
+  553  skopeo inspect docker://registry.redhat.io/rhel8/postgesql-12
+  554  skopeo inspect docker://registry.redhat.io/rhel8/postgresql-12:1-43
+  555  skopeo inspect docker://registry.redhat.io/rhel8/postgresql-12:1-43 | grep usage
+  556  oc new-app --as-deployment-config --name postgre --docker-image registry.redhat.io/rhel8/postgresql-12:1-43 -e POSTGRESQL_USER=user -e POSTGRESQL_PASSWORD=pass -e POSTGRESQL_DATABASE=db --dry-run
+  557  oc new-app --as-deployment-config --name postgre --docker-image registry.redhat.io/rhel8/postgresql-12:1-43 -e POSTGRESQL_USER=redhat -e POSTGRESQL_PASSWORD=redhat123 -e POSTGRESQL_DATABASE=persistentdb --dry-run
+  558  oc new-app --as-deployment-config --name postgresql-persistent --docker-image registry.redhat.io/rhel8/postgresql-12:1-43 -e POSTGRESQL_USER=redhat -e POSTGRESQL_PASSWORD=redhat123 -e POSTGRESQL_DATABASE=persistentdb --dry-run
+  559  oc new-app --as-deployment-config --name postgresql-persistent --docker-image registry.redhat.io/rhel8/postgresql-12:1-43 -e POSTGRESQL_USER=redhat -e POSTGRESQL_PASSWORD=redhat123 -e POSTGRESQL_DATABASE=persistentdb
+  560  oc get pods
+  561  oc project
+  562  oc get pods
+  563  oc --help
+  564  oc adm --help
+  565  oc create --help
+  566  oc set --help
+  567  oc get all
+  568  oc set volume
+  569  oc set volume --help
+  570  oc set volume --help | pvc
+  571  oc set volume --help | grep pvc
+  572  oc get dc
+  573  oc set volume dc/postgresql-persistent --add --name postgresql-volume --claim-sixe=1G --overwrite --dry-run
+  574  oc set volume dc/postgresql-persistent --add --name postgresql-volume --claim-size=1G --overwrite --dry-run
+  575  oc set volume dc/postgresql-persistent --add --name postgresql-storage -t pvc --claim-class nfs-storage --claim-mode rwo --claim-size=10G --mount-path /var/lib/pgsql --claim-name postgresql-storage --dry-run
+  576  oc get pvc
+  577  oc set volume dc/postgresql-persistent --add --name postgresql-storage -t pvc --claim-class nfs-storage --claim-mode rwo --claim-size=10G --mount-path /var/lib/pgsql --claim-name postgresql-storage
+  578  oc get pvx
+  579  oc get pvc
+  580  histore | grep "oc new-app"
+  581  history | grep "oc new-app"
+  582  oc exec deployment.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/Student/DO280/labs/install-storage/init_data.sql --dry-run
+  583  oc exec deployment.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  584  oc exec dc/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  585  oc exec postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  586  oc exec app/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  587  oc exec apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  588  oc exec dc.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql --dry-run
+  589  oc exec dc.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U persistentdb < /home/student/DO280/labs/install-storage/init_data.sql
+  590  oc exec dc.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U redhat < /home/student/DO280/labs/install-storage/init_data.sql
+  591  oc exec dc.apps/postgresql-persistent -i redhat123 -- /usr/bin/psql -U redhat persistentdb < /home/student/DO280/labs/install-storage/init_data.sql
+  592  oc get pvc
+  593  oc get pv
+  594  oc get pv -o custom-columns=Name:.metadata.name,CLAIM:.spec.clainRef.name
+  595  oc get pv -o custom-columns=Name:.metadata.name,CLAIM:.spec.claimRef.name
+  596  oc get pv -o yaml
+  597  git add .
+  598  git commit -a -m "install-storage"
+  599  git push
+  600  echo $APP
+  601  oc get all
+  602  cd DO280
+  603  cd ..
+  604  cd DO280
+  605  ls
+  606  source /usr/local/etc/ocp4.config
+  607  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+  608  oc project
+  609  oc get pods
+  610  oc get all
+  611  history | grep "oc new-app"
+  612  history > history-10-11-2021.txt
